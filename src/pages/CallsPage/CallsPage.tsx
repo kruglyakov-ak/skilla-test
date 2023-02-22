@@ -1,6 +1,10 @@
 import { FC } from 'react'
-import s from './callsPage.module.scss'
+import { Layout } from '../../features'
 
 export const CallsPage: FC = () => {
-  return <div className={s.wrapper}></div>
+  return (
+    <Layout>
+      <div></div>
+    </Layout>
+  )
 }
