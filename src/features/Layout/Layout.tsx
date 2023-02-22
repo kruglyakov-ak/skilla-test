@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import { MainHeader } from '../../components'
+import { AsideNavMenu, MainHeader } from '../../components'
 import s from './layout.module.scss'
 
 interface LayoutProps {
@@ -10,6 +10,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <MainHeader />
+      <AsideNavMenu />
       <main className={s.main}>{children}</main>
     </>
   )
