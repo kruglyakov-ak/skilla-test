@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react'
+import { MainHeader } from '../../components'
 import s from './layout.module.scss'
 
 interface LayoutProps {
@@ -6,5 +7,10 @@ interface LayoutProps {
 }
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
-  return <main className={s.main}>{children}</main>
+  return (
+    <>
+      <MainHeader />
+      <main className={s.main}>{children}</main>
+    </>
+  )
 }
