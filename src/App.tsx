@@ -1,5 +1,7 @@
+import { CallsPage } from './pages'
+
 function App() {
-  return <div className='App'></div>
+  return <CallsPage />
 }
 
 export default App
