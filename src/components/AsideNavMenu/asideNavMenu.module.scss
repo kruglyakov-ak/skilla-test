@@ -12,14 +12,13 @@
 
   & .logoLink {
     display: inline-block;
-    padding-bottom: 25px;
+    margin-bottom: 25px;
     padding-left: 12px;
   }
 
   & .navItem {
     width: 100%;
     height: 52px;
-    padding-left: 12px;
 
     &.active {
       background: rgba(216, 228, 251, 0.32);
@@ -62,12 +61,17 @@
       align-items: center;
       width: 100%;
       height: 100%;
-      padding-left: 36px;
+      padding-left: 48px;
+
+      &:hover,
+      &:focus {
+        background: rgba(216, 228, 251, 0.32);
+      }
 
       & .navItemImg {
         position: absolute;
         top: 14px;
-        left: 0;
+        left: 12px;
         opacity: 0.6;
       }
     }
