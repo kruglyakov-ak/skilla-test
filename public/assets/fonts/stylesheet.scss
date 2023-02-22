@@ -1,0 +1,26 @@
+$SFProDisplay: 'SF Pro Display';
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+
+@font-face {
+  font-family: $SFProDisplay;
+  font-weight: $fw-regular;
+  font-style: normal;
+  src: url('./SFProDisplay/SFProDisplay-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: $SFProDisplay;
+  font-weight: $fw-medium;
+  font-style: normal;
+  src: url('./SFProDisplay/SFProDisplay-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: $SFProDisplay;
+  font-weight: $fw-semibold;
+  font-style: normal;
+  src: url('./SFProDisplay/SFProDisplay-Semibold.ttf') format('truetype');
+}
