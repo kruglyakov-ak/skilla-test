@@ -3,6 +3,7 @@
 .wrapper {
   width: 240px;
   height: 100%;
+  min-height: 963px;
   background-color: $color-nav-bg;
 
   font-weight: $fw-medium;
@@ -94,6 +95,7 @@
 
       &.order {
         padding-right: 37px;
+
       }
 
       &.pay {
