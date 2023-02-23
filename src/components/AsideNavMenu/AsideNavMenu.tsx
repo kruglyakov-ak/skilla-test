@@ -37,8 +37,22 @@ export const AsideNavMenu: FC = () => {
         </ul>
       </nav>
       <div className={s.menuButtons}>
-        <Button fill={'fill'} className={s.button}>Добавить заказ</Button>
-        <Button fill={'fill'} className={s.button}>Оплата</Button>
+        <Button fill={'fill'} className={cn(s.button, s.order)}>
+          Добавить заказ
+          <img
+            className={s.buttonIcon}
+            src='./assets/images/icons/navigation/add_order.svg'
+            alt=''
+          />
+        </Button>
+        <Button fill={'fill'} className={cn(s.button, s.pay)}>
+          Оплата
+          <img
+            className={s.buttonIcon}
+            src='./assets/images/icons/navigation/alert_pay.svg'
+            alt=''
+          />
+        </Button>
       </div>
     </aside>
   )

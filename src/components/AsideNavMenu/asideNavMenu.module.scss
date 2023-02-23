@@ -81,8 +81,23 @@
     padding: 64px 20px 20px;
 
     & .button {
+      position: relative;
+
       &:not(:last-child) {
         margin-bottom: 32px;
+      }
+
+      & .buttonIcon {
+        position: absolute;
+        right: 20px;
+      }
+
+      &.order {
+        padding-right: 37px;
+      }
+
+      &.pay {
+        padding-right: 17px;
       }
     }
   }

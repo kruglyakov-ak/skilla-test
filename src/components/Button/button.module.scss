@@ -6,6 +6,10 @@
   border-radius: 4px;
   color: white;
   cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.fill {
     width: 100%;
@@ -23,7 +27,7 @@
       background-color: $color-accent-active;
     }
   }
-  
+
   &.border {
     width: 122px;
     height: 40px;
@@ -39,9 +43,9 @@
     }
 
     &:active {
-        color: $color-accent-active;
-        background-color: transparent;
-        border: 1px solid $color-accent-active;
+      color: $color-accent-active;
+      background-color: transparent;
+      border: 1px solid $color-accent-active;
     }
   }
   &.none {
