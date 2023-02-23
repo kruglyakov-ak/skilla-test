@@ -1,0 +1,7 @@
+@use '../../styles/' as *;
+
+.header {
+  width: calc(100% - 240px);
+  height: 64px;
+  background-color: $color-white;
+}
