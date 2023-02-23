@@ -2,6 +2,7 @@ import { FC } from 'react'
 import cn from 'classnames'
 import { mockNavItems } from '../../shared/mocks/navItems'
 import s from './asideNavMenu.module.scss'
+import { Button } from '../Button/Button'
 
 export const AsideNavMenu: FC = () => {
   return (
@@ -35,6 +36,10 @@ export const AsideNavMenu: FC = () => {
           ))}
         </ul>
       </nav>
+      <div className={s.menuButtons}>
+        <Button fill={'fill'} className={s.button}>Добавить заказ</Button>
+        <Button fill={'fill'} className={s.button}>Оплата</Button>
+      </div>
     </aside>
   )
 }

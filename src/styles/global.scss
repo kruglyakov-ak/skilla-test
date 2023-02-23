@@ -33,6 +33,15 @@ body {
   overflow-x: hidden;
 }
 
+button,
+input {
+  font-family: $SFProDisplay, sans-serif;
+  font-size: 15px;
+  font-weight: $fw-regular;
+  line-height: 1.5;
+  color: $color-text;
+}
+
 ul {
   margin: 0;
   padding: 0;

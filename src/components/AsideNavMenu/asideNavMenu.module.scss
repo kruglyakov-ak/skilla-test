@@ -76,4 +76,14 @@
       }
     }
   }
+
+  & .menuButtons {
+    padding: 64px 20px 20px;
+
+    & .button {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+  }
 }
