@@ -1,7 +1,8 @@
 import { FC, useState } from 'react'
 import cn from 'classnames'
-import s from './mainHeader.module.scss'
 import { Select } from '../Select/Select'
+import s from './mainHeader.module.scss'
+import { UserMenu } from '../UserMenu/UserMenu'
 
 export const MainHeader: FC = () => {
   const [organization, setOrganization] = useState(
@@ -57,9 +58,7 @@ export const MainHeader: FC = () => {
         className={s.organizationSelect}
       />
 
-      <div className={s.user}>
-        <img src='./assets/images/header-avatar.png' alt='Аватар' />
-      </div>
+      <UserMenu />
     </header>
   )
 }

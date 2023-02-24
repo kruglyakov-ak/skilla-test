@@ -31,19 +31,21 @@ export const Select: FC<SelectProps> = ({
   }
 
   return (
-    <div
-      className={cn(s.select, className, { [s.dropped]: isActive })}
-      onClick={selectClickHandler}
-    >
-      <svg className={s.icon} fill='none'>
-        <path
-          fill='#ADBFDF'
-          d='M7.41 8.59009 12 13.1701l4.59-4.58001L18 10.0001l-6 6-6-6 1.41-1.41001Z'
-          opacity='.8'
-        />
-      </svg>
+    <div className={s.wrapper}>
+      <div
+        className={cn(s.select, className, { [s.dropped]: isActive })}
+        onClick={selectClickHandler}
+      >
+        {selectedOption}
+        <svg className={s.icon} fill='none'>
+          <path
+            fill='#ADBFDF'
+            d='M7.41 8.59009 12 13.1701l4.59-4.58001L18 10.0001l-6 6-6-6 1.41-1.41001Z'
+            opacity='.8'
+          />
+        </svg>
+      </div>
 
-      {selectedOption}
       {isActive && (
         <div className={s.dropedList}>
           <div className={cn(s.title, s.option)} onClick={optionClickHandler}>

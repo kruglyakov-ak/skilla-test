@@ -1,0 +1,156 @@
+@use '../../styles/' as *;
+
+.wrapper {
+  position: relative;
+
+  & .userMenu {
+    height: 40px;
+    margin-left: 41px;
+    position: relative;
+    padding-right: 22px;
+    cursor: pointer;
+
+    & .icon {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 9px;
+      right: -6px;
+      transition: all 0.3s;
+    }
+
+    &.dropped .icon {
+      transform: scaleY(-1);
+      & path {
+        fill: $color-accent;
+      }
+    }
+  }
+
+  & .droppedMenu {
+    position: absolute;
+    min-width: 368px;
+    top: 44px;
+    left: -169px;
+    background: #ffffff;
+    border: 1px solid #eaf0fa;
+    box-shadow: 0px 0px 26px rgba(233, 237, 243, 0.8);
+    border-radius: 4px;
+    padding-top: 18px;
+    color: $color-text-secondary;
+
+    & .userTitle {
+      padding: 0 32px;
+
+      & .userName {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 124%;
+        color: $color-text;
+        padding-bottom: 5px;
+      }
+
+      & .userDesc {
+        & span:not(:last-child) {
+          padding-right: 17px;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 9px;
+            right: 5px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: $color-icon;
+          }
+        }
+      }
+    }
+
+    & .userContacts {
+      border-bottom: 1px solid #eaf0fa;
+      padding: 17px 32px 13px;
+
+      & p {
+        padding-left: 24px;
+        position: relative;
+
+        &:not(:first-child) {
+          margin-top: 4px;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      & .phone {
+        &::after {
+          background-image: url('../../../public/assets/images/icons/phone.svg');
+          top: 2px;
+          left: -2px;
+        }
+      }
+      & .email {
+        &::after {
+          background-image: url('../../../public/assets/images/icons/mail.svg');
+          top: 4px;
+          left: -2px;
+        }
+      }
+    }
+
+    & .employeeListWrapp {
+      padding-top: 15px;
+      padding-bottom: 23px;
+
+      & .employeeList {
+
+        &:not(:last-child) {
+            padding-bottom: 13px;
+        }
+
+        & .employeeListTitle {
+          padding: 0 32px 7px;
+        }
+
+        & .employee {
+          padding-left: 75px;
+          position: relative;
+          width: 100%;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          color: #005ff8;
+
+          &:hover {
+            color: $color-accent-hover;
+            background-color: rgba(0, 44, 251, 0.13);
+            position: relative;
+
+            & .loginButton {
+              position: absolute;
+              top: 11px;
+              right: 29px;
+              width: 24px;
+              height: 24px;
+              background-image: url('../../../public/assets/images/icons/login.svg');
+            }
+          }
+
+          & .employeeAvatar {
+            position: absolute;
+            top: 7px;
+            left: 31px;
+          }
+
+        }
+      }
+    }
+  }
+}
