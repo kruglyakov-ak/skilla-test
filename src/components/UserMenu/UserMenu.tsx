@@ -2,7 +2,11 @@ import { FC, useState } from 'react'
 import cn from 'classnames'
 import s from './userMenu.module.scss'
 
-export const UserMenu: FC = () => {
+interface UserMenuProps {
+  className?: string
+}
+
+export const UserMenu: FC<UserMenuProps> = ({ className }) => {
   const [isUserMenuDropped, setIsUserMenuDropped] = useState(false)
 
   const userMenuClickHandler = () => {
@@ -10,7 +14,7 @@ export const UserMenu: FC = () => {
   }
 
   return (
-    <div className={s.wrapper}>
+    <div className={cn(s.wrapper, className)}>
       <div
         className={cn(s.userMenu, { [s.dropped]: isUserMenuDropped })}
         onClick={userMenuClickHandler}

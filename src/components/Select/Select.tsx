@@ -31,9 +31,9 @@ export const Select: FC<SelectProps> = ({
   }
 
   return (
-    <div className={s.wrapper}>
+    <div className={cn(s.wrapper, className)}>
       <div
-        className={cn(s.select, className, { [s.dropped]: isActive })}
+        className={cn(s.select, { [s.dropped]: isActive })}
         onClick={selectClickHandler}
       >
         {selectedOption}
