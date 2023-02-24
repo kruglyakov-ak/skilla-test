@@ -1,12 +1,21 @@
 .wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 64px 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'nav header'
+    'nav main';
 
-.main {
-  background-color: #e5e5e5;
+  & aside {
+    grid-area: nav;
+  }
+  & header {
+    grid-area: header;
+  }
+  & .main {
+    grid-area: main;
+    background-color: #e5e5e5;
+    min-height: 100vh;
+  }
 }

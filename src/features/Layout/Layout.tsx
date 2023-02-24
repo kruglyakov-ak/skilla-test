@@ -12,8 +12,8 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
       <div className={s.wrapper}>
         <AsideNavMenu />
         <MainHeader />
-      </div>
       <main className={s.main}>{children}</main>
+      </div>
     </>
   )
 }
