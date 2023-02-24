@@ -6,6 +6,7 @@ export const MainHeader: FC = () => {
   return (
     <header className={s.header}>
       <div>Среда, 13 окт</div>
+
       <div className={s.analytics}>
         <div className={cn(s.analitisItem, s.green)}>
           <p>
@@ -33,7 +34,7 @@ export const MainHeader: FC = () => {
         </div>
       </div>
 
-      <input type={'search'} />
+      <input className={s.headerSearch} type={'search'} />
 
       <select>
         <option>ООО Грузчиков Сервис Запад</option>

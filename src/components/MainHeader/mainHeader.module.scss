@@ -15,6 +15,7 @@
     height: 100%;
     font-size: 14px;
     padding-left: 85px;
+    padding-right: 25px;
     gap: 57px;
 
     & .analitisItem {
@@ -71,5 +72,13 @@
         }
       }
     }
+  }
+
+  & .headerSearch {
+    height: 40px;
+    background-image: url('../../../public/assets/images/icons/search.svg');
+    background-position: 173px 12px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
   }
 }
