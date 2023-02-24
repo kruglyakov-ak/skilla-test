@@ -15,7 +15,7 @@ export const MainHeader: FC = () => {
 
   return (
     <header className={s.header}>
-      <div>Среда, 13 окт</div>
+      <div className={s.date}>Среда, 13 окт</div>
 
       <div className={s.analytics}>
         <div className={cn(s.analitisItem, s.green)}>

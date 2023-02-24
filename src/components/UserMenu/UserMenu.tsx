@@ -47,8 +47,12 @@ export const UserMenu: FC<UserMenuProps> = ({ className }) => {
           </div>
 
           <div className={s.userContacts}>
-            <p className={s.phone}>8 (800) 333-17-21</p>
-            <p className={s.email}>hi@skilla.ru</p>
+            <a href='tel: 8 (800) 333-17-21' className={s.phone}>
+              8 (800) 333-17-21
+            </a>
+            <a href='mailto:hi@skilla.ru' className={s.email}>
+              hi@skilla.ru
+            </a>
           </div>
 
           <div className={s.employeeListWrapp}>

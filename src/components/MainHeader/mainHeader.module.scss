@@ -9,6 +9,11 @@
   padding: 12px 120px;
   color: $color-text-header;
 
+  & .date {
+    white-space: nowrap;
+
+  }
+
   & .analytics {
     display: flex;
     height: 100%;
