@@ -38,6 +38,10 @@
 
     & .title {
       color: $color-accent;
+
+      &:hover {
+        color: $color-accent;
+      }
     }
   }
 
@@ -48,11 +52,10 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-image: url('../../../public/assets/images/icons/arrow_down.svg');
     transition: all 0.3s;
   }
 
-  &.dropped .icon  {
+  &.dropped .icon {
     transform: scaleY(-1);
     & path {
       fill: $color-accent;
