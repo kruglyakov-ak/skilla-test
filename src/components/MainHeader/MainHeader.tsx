@@ -1,8 +1,17 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import cn from 'classnames'
 import s from './mainHeader.module.scss'
+import { Select } from '../Select/Select'
 
 export const MainHeader: FC = () => {
+  const [organization, setOrganization] = useState(
+    'ИП Сидорова Александра Михайловна'
+  )
+
+  const organisationSelectHandler = (option: string) => {
+    setOrganization(option)
+  }
+
   return (
     <header className={s.header}>
       <div>Среда, 13 окт</div>
@@ -36,11 +45,17 @@ export const MainHeader: FC = () => {
 
       <input className={s.headerSearch} type={'search'} />
 
-      <select>
-        <option>ООО Грузчиков Сервис Запад</option>
-        <option selected>ИП Сидорова Александра Михайловна</option>
-        <option>ИП Иванов М.М.</option>
-      </select>
+      <Select
+        selectOptionHandler={organisationSelectHandler}
+        title={'Все организации'}
+        options={[
+          'ООО Грузчиков Сервис Запад',
+          'ИП Сидорова Александра Михайловна',
+          'ИП Иванов М.М.',
+        ]}
+        selectedOption={organization}
+        className={s.organizationSelect}
+      />
 
       <div className={s.user}>
         <img src='./assets/images/header-avatar.png' alt='Аватар' />

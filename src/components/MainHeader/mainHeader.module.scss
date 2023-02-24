@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   padding: 12px 120px;
-
+  text-align: end;
   color: $color-text-header;
 
   & .analytics {
@@ -80,5 +80,10 @@
     background-position: 173px 12px;
     background-size: 16px 16px;
     background-repeat: no-repeat;
+  }
+
+  & .organizationSelect {
+    width: 300px;
+    margin-left: 43px;
   }
 }

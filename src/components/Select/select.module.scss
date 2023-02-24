@@ -1,0 +1,61 @@
+@use '../../styles/' as *;
+
+.select {
+  position: relative;
+  padding-right: 29px;
+  cursor: pointer;
+
+  & .dropedList {
+    position: absolute;
+    width: max-content;
+    top: 30px;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #eaf0fa;
+    box-shadow: 0px 0px 26px rgba(233, 237, 243, 0.8);
+    border-radius: 4px;
+
+    & .option {
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0 20px;
+
+      &:first-child {
+        border-radius: 4px 4px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 4px 4px;
+      }
+
+      &:hover {
+        background-color: rgb(0, 44, 251, 0.13);
+        color: $color-text;
+      }
+    }
+
+    & .title {
+      color: $color-accent;
+    }
+  }
+
+  & .icon {
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('../../../public/assets/images/icons/arrow_down.svg');
+    transition: all 0.3s;
+  }
+
+  &.dropped .icon  {
+    transform: scaleY(-1);
+    & path {
+      fill: $color-accent;
+    }
+  }
+}
