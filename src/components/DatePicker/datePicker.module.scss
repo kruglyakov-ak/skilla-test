@@ -1,0 +1,22 @@
+@use '../../styles/' as *;
+
+.wrapper {
+  min-width: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .date {
+    font-size: 14px;
+    padding-left: 20px;
+    position: relative;
+
+    & .dateIcon {
+      width: 16px;
+      height: 18px;
+      position: absolute;
+      top: 1px;
+      left: -4px;
+    }
+  }
+}

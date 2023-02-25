@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { BalanceButton, DatePiker } from '../../components'
+import { BalanceButton, DatePicker } from '../../components'
 import s from './callsSort.module.scss'
 
 export const CallsSort: FC = () => {
@@ -7,7 +7,7 @@ export const CallsSort: FC = () => {
     <div className={s.wrapper}>
       <div className={s.topContent}>
         <BalanceButton balance={272} className={s.balanceButton}/>
-        <DatePiker />
+        <DatePicker />
       </div>
       <div className={s.bottomContent}></div>
     </div>
