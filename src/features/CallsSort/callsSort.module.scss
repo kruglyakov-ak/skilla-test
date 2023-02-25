@@ -22,6 +22,10 @@
     & .sortSelects {
       display: flex;
 
+      & div:not(:last-child) {
+        margin-right: 30px;
+      }
+
       & .resetFilters {
         border: none;
         background: none;
@@ -29,9 +33,14 @@
         color: $color-text-secondary;
         cursor: pointer;
         position: relative;
+        margin-right: 39px;
+        padding-right: 22px;
+        font-size: 14px;
 
         & .icon {
           position: absolute;
+          top: 5px;
+          right: 0;
         }
 
         &:hover {
