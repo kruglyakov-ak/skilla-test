@@ -2,5 +2,13 @@
 
 .wrapper {
   & .topContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 20px;
+
+    & .balanceButton {
+      margin-right: 50px;
+    }
   }
 }
