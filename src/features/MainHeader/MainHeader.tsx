@@ -1,8 +1,8 @@
 import { FC, useState } from 'react'
 import cn from 'classnames'
-import { Select } from '../Select/Select'
+import { Select } from '../../components/Select/Select'
 import s from './mainHeader.module.scss'
-import { UserMenu } from '../UserMenu/UserMenu'
+import { UserMenu } from '../../components/UserMenu/UserMenu'
 
 export const MainHeader: FC = () => {
   const [organization, setOrganization] = useState(

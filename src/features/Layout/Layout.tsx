@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import { AsideNavMenu, MainHeader } from '../../components'
+import { AsideNavMenu, MainHeader } from '..'
 import s from './layout.module.scss'
 
 interface LayoutProps {

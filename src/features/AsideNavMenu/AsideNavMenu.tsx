@@ -2,7 +2,7 @@ import { FC } from 'react'
 import cn from 'classnames'
 import { mockNavItems } from '../../shared/mocks/navItems'
 import s from './asideNavMenu.module.scss'
-import { Button } from '../Button/Button'
+import { Button } from '../../components/Button/Button'
 
 export const AsideNavMenu: FC = () => {
   return (
