@@ -58,7 +58,7 @@ export const MainHeader: FC = () => {
         className={s.organizationSelect}
       />
 
-      <UserMenu className={s.userMenu}/>
+      <UserMenu className={s.userMenu} />
     </header>
   )
 }
