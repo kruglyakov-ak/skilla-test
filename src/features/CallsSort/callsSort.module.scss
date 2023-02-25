@@ -16,5 +16,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 33px;
+    font-size: 14px;
+
+    & .sortSelects {
+      display: flex;
+
+      & .resetFilters {
+        border: none;
+        background: none;
+        padding: 0;
+        color: $color-text-secondary;
+        cursor: pointer;
+        position: relative;
+
+        & .icon {
+          position: absolute;
+        }
+
+        &:hover {
+          color: $color-accent;
+          & .icon path {
+            fill: $color-accent;
+          }
+        }
+      }
+    }
   }
 }

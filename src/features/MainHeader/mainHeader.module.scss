@@ -90,6 +90,10 @@
     margin-left: 43px;
     z-index: 3;
 
+    & div {
+      padding-right: 29px;
+    }
+
     & div span {
       color: $color-text-header;
     }
