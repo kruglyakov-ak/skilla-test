@@ -87,6 +87,24 @@ export const DatePicker: FC<DatePickerProps> = ({
               {period}
             </p>
           ))}
+
+          <div className={s.datepickeWrapper}>
+            <p className={s.datepickerTitle}>Указать даты</p>
+            <div className={s.inputWrapper}>
+              <input
+                className={s.input}
+                type={'text'}
+                placeholder='__.__.__-__.__.__'
+              />
+
+              <svg className={s.inputIcon}>
+                <path
+                  fill='#ADBFDF'
+                  d='M14.4 1.64h-.8V0H12v1.64H4V0H2.4v1.64h-.8c-.88 0-1.6.73-1.6 1.63v13.1C0 17.26.72 18 1.6 18h12.8c.88 0 1.6-.74 1.6-1.64V3.27c0-.9-.72-1.63-1.6-1.63Zm0 14.72H1.6V5.73h12.8v10.63Z'
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       )}
     </div>

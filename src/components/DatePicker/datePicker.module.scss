@@ -64,7 +64,6 @@
 
   & .droppedList {
     position: absolute;
-    width: max-content;
     min-width: 202px;
     top: 30px;
     left: -89px;
@@ -89,6 +88,39 @@
       &:hover {
         background-color: rgba(0, 44, 251, 0.13);
         color: $color-text;
+      }
+    }
+
+    & .datepickeWrapper {
+      padding: 9px 20px 0;
+
+      & .datepickerTitle {
+        color: $color-text;
+      }
+
+      & .inputWrapper {
+        padding-top: 0;
+        position: relative;
+
+        & .input {
+          font-size: 16px;
+          letter-spacing: 0.04em;
+          line-height: 28px;
+          width: 100%;
+
+          &::placeholder {
+            color: #adbfdf;
+            font-weight: 600;
+          }
+        }
+
+        & .inputIcon {
+          width: 16px;
+          height: 18px;
+          position: absolute;
+          top: 4px;
+          right: 2px;
+        }
       }
     }
   }
