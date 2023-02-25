@@ -82,6 +82,7 @@ export const DatePicker: FC<DatePickerProps> = ({
                 [s.active]: selectPeriod === period,
               })}
               onClick={() => changePeriodHandler(index)}
+              key={period + index}
             >
               {period}
             </p>
