@@ -89,6 +89,14 @@
     width: 300px;
     margin-left: 43px;
     z-index: 3;
+
+    & div span {
+      color: $color-text-header;
+    }
+
+    & div svg path {
+      fill: $color-text-header !important;
+    }
   }
 
   & .userMenu {

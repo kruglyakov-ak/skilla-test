@@ -7,6 +7,15 @@
     padding-right: 29px;
     cursor: pointer;
     text-align: end;
+    color: $color-text-secondary;
+
+    &.dropped {
+      color: $color-text;
+    }
+
+    &.changed {
+      color: $color-accent;
+    }
 
     & .icon {
       width: 24px;
@@ -24,6 +33,12 @@
         fill: $color-accent;
       }
     }
+
+    &.changed .icon {
+      & path {
+        fill: $color-accent;
+      }
+    }
   }
 
   & .dropedList {
@@ -35,6 +50,7 @@
     border: 1px solid #eaf0fa;
     box-shadow: 0px 0px 26px rgba(233, 237, 243, 0.8);
     border-radius: 4px;
+    z-index: 3;
 
     & .option {
       min-height: 40px;
@@ -42,6 +58,7 @@
       align-items: center;
       cursor: pointer;
       padding: 0 20px;
+      color: $color-text-header;
 
       &:first-child {
         border-radius: 4px 4px 0 0;

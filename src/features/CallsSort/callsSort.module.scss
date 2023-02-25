@@ -11,4 +11,10 @@
       margin-right: 50px;
     }
   }
+
+  & .bottomContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
