@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   & .btn {
     width: 16px;
@@ -57,6 +58,37 @@
     &:hover {
       & .dateIcon path {
         fill: $color-accent;
+      }
+    }
+  }
+
+  & .droppedList {
+    position: absolute;
+    width: max-content;
+    min-width: 202px;
+    top: 30px;
+    left: -89px;
+    background: #ffffff;
+    border: 1px solid #eaf0fa;
+    box-shadow: 0px 0px 26px rgba(233, 237, 243, 0.8);
+    border-radius: 4px;
+    font-size: 14px;
+    color: $color-text-header;
+
+    & .droppedItem {
+      padding: 0 20px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &.active {
+        color: $color-accent;
+      }
+
+      &:hover {
+        background-color: rgba(0, 44, 251, 0.13);
+        color: $color-text;
       }
     }
   }
