@@ -69,3 +69,5 @@ export const api = createApi({
     }),
   }),
 })
+
+export const { useGetCallsQuery } = api
