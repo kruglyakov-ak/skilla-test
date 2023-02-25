@@ -1,0 +1,56 @@
+@use '../../styles/' as *;
+
+.balanceWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  height: 40px;
+  padding: 0 12px;
+  background: $color-white;
+  border-radius: 48px;
+  cursor: pointer;
+
+  & .balance {
+    color: $color-text-header;
+    padding-right: 10px;
+
+    & span {
+      color: $color-text;
+    }
+  }
+
+  & .addButton {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:hover {
+    & .balance span {
+      color: $color-accent;
+    }
+
+    & .addButton svg path {
+      fill: $color-accent-hover;
+    }
+  }
+
+  &:active {
+    & .balance span {
+      color: $color-text;
+    }
+
+    & .addButton svg path {
+      fill: $color-accent-active;
+    }
+  }
+}
