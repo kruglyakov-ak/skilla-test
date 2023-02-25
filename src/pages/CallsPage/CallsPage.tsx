@@ -1,10 +1,10 @@
 import { FC } from 'react'
-import { Layout } from '../../features'
+import { CallsSort, Layout } from '../../features'
 
 export const CallsPage: FC = () => {
   return (
     <Layout>
-      <div></div>
+      <CallsSort />
     </Layout>
   )
 }
