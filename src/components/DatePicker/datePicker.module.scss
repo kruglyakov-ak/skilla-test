@@ -1,15 +1,50 @@
 @use '../../styles/' as *;
 
 .wrapper {
-  min-width: 115px;
+  min-width: 116px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  & .btn {
+    width: 16px;
+    height: 100%;
+    position: relative;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+
+    & svg {
+      width: 6px;
+      height: 11px;
+      position: absolute;
+    }
+
+    &.prevBtn svg {
+      top: 6px;
+      left: 0px;
+    }
+
+    &.nextBtn svg {
+      top: 6px;
+      right: 4px;
+    }
+
+    &:hover {
+      & svg path {
+        fill: $color-accent;
+      }
+    }
+  }
 
   & .date {
     font-size: 14px;
     padding-left: 20px;
     position: relative;
+    color: $color-accent;
+    cursor: pointer;
 
     & .dateIcon {
       width: 16px;
@@ -17,6 +52,12 @@
       position: absolute;
       top: 1px;
       left: -4px;
+    }
+
+    &:hover {
+      & .dateIcon path {
+        fill: $color-accent;
+      }
     }
   }
 }

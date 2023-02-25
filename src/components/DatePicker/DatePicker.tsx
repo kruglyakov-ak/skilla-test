@@ -5,7 +5,19 @@ import s from './datePicker.module.scss'
 export const DatePicker: FC = () => {
   return (
     <div className={s.wrapper}>
-      <button className={cn(s.btn, s.prevBtn)}></button>
+      <button className={cn(s.btn, s.prevBtn)}>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 7 10'
+          data-ember-extension='1'
+        >
+          <path
+            fill='#ADBFDF'
+            d='M6.2 8.8 2.4 5l3.8-3.8L5 0 0 5l5 5 1.2-1.2Z'
+          />
+        </svg>
+      </button>
       <div className={s.date}>
         <svg className={s.dateIcon}>
           <path
@@ -15,7 +27,16 @@ export const DatePicker: FC = () => {
         </svg>
         3 дня
       </div>
-      <button className={cn(s.btn, s.nextBtn)}></button>
+      <button className={cn(s.btn, s.nextBtn)}>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 7 10'
+          data-ember-extension='1'
+        >
+          <path fill='#ADBFDF' d='M.6 8.8 4.4 5 .6 1.2 1.8 0l5 5-5 5L.6 8.8Z' />
+        </svg>
+      </button>
     </div>
   )
 }
