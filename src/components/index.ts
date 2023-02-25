@@ -4,10 +4,4 @@ import { DatePicker } from './DatePicker/DatePicker'
 import { Select } from './Select/Select'
 import { UserMenu } from './UserMenu/UserMenu'
 
-export {
-  Button,
-  Select,
-  UserMenu,
-  BalanceButton,
-  DatePicker,
-}
+export { Button, Select, UserMenu, BalanceButton, DatePicker }

@@ -7,7 +7,10 @@ interface BalanceButtonProps {
   className?: string
 }
 
-export const BalanceButton: FC<BalanceButtonProps> = ({ balance, className }) => {
+export const BalanceButton: FC<BalanceButtonProps> = ({
+  balance,
+  className,
+}) => {
   return (
     <div className={cn(s.balanceWrapper, className)}>
       <p className={s.balance}>
