@@ -58,7 +58,7 @@ export const api = createApi({
   reducerPath: 'callsApi',
   baseQuery: baseQuery,
   endpoints: build => ({
-    getCalls: build.query<CallsResponse, string>({
+    getCalls: build.query<CallsResponse, void>({
       query() {
         return {
           url: ``,
