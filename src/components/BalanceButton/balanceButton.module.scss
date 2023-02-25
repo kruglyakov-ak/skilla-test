@@ -14,9 +14,11 @@
   & .balance {
     color: $color-text-header;
     padding-right: 10px;
+    font-size: 14px;
 
     & span {
       color: $color-text;
+      font-weight: 500;
     }
   }
 
@@ -29,7 +31,7 @@
     cursor: pointer;
 
     & svg {
-      width: 100%;
+      width: 101%;
       height: 100%;
     }
   }

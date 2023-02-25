@@ -1,13 +1,15 @@
 import { FC } from 'react'
+import cn from 'classnames'
 import s from './balanceButton.module.scss'
 
 interface BalanceButtonProps {
   balance: number
+  className?: string
 }
 
-export const BalanceButton: FC<BalanceButtonProps> = ({ balance }) => {
+export const BalanceButton: FC<BalanceButtonProps> = ({ balance, className }) => {
   return (
-    <div className={s.balanceWrapper}>
+    <div className={cn(s.balanceWrapper, className)}>
       <p className={s.balance}>
         Баланс: <span>{balance} &#8381;</span>
       </p>
