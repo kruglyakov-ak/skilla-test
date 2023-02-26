@@ -1,41 +1,65 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import cn from 'classnames'
+import dayjs from 'dayjs'
 import s from './datePicker.module.scss'
+import { useAppDispatch } from '../../hooks/redux'
+import { sortSlice } from '../../store/reducers/SortSlice'
 
-interface DatePickerProps {
-  selectPeriod: string
-  setPeriodHandler: (period: string) => void
-}
-
-export const DatePicker: FC<DatePickerProps> = ({
-  selectPeriod,
-  setPeriodHandler,
-}) => {
+export const DatePicker: FC = () => {
   const [isDropp, setisDropp] = useState(false)
   const periods = ['3 дня', 'Неделя', 'Месяц', 'Год']
+  const [selectPeriod, setSelectPeriod] = useState('3 дня')
+
+  const dispatch = useAppDispatch()
+  const { setStartDate } = sortSlice.actions
+
+  useEffect(() => {
+    switch (selectPeriod) {
+      case '3 дня':
+        dispatch(
+          setStartDate(dayjs(Date.now()).subtract(3, 'd').format('YYYY-MM-DD'))
+        )
+        break
+      case 'Неделя':
+        dispatch(
+          setStartDate(dayjs(Date.now()).subtract(1, 'w').format('YYYY-MM-DD'))
+        )
+        break
+      case 'Месяц':
+        dispatch(
+          setStartDate(dayjs(Date.now()).subtract(1, 'm').format('YYYY-MM-DD'))
+        )
+        break
+      case 'Год':
+        dispatch(
+          setStartDate(dayjs(Date.now()).subtract(1, 'y').format('YYYY-MM-DD'))
+        )
+        break
+    }
+  }, [dispatch, selectPeriod, setStartDate])
 
   const dateClickHandler = () => {
     setisDropp(!isDropp)
   }
 
   const changePeriodHandler = (index: number) => {
-    setPeriodHandler(periods[index])
+    setSelectPeriod(periods[index])
     setisDropp(false)
   }
 
   const nextButtonClick = () => {
     if (periods.indexOf(selectPeriod) === periods.length - 1) {
-      setPeriodHandler(periods[0])
+      setSelectPeriod(periods[0])
     } else {
-      setPeriodHandler(periods[periods.indexOf(selectPeriod) + 1])
+      setSelectPeriod(periods[periods.indexOf(selectPeriod) + 1])
     }
   }
 
   const prevButtonClick = () => {
     if (periods.indexOf(selectPeriod) === 0) {
-      setPeriodHandler(periods[periods.length - 1])
+      setSelectPeriod(periods[periods.length - 1])
     } else {
-      setPeriodHandler(periods[periods.indexOf(selectPeriod) - 1])
+      setSelectPeriod(periods[periods.indexOf(selectPeriod) - 1])
     }
   }
 

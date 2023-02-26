@@ -8,7 +8,6 @@ import { sortSlice } from '../../store/reducers/SortSlice'
 export const CallsSort: FC = () => {
   const dispatch = useAppDispatch()
   const { setCallType } = sortSlice.actions
-  const [selectPeriod, setSelectPeriod] = useState('3 дня')
 
   const [isFiltersDefault, setIsFiltersDefault] = useState(true)
   const [isCallSearchEmpty, setIsCallSearchEmpty] = useState(true)
@@ -69,10 +68,7 @@ export const CallsSort: FC = () => {
     <div className={s.wrapper}>
       <div className={s.topContent}>
         <BalanceButton balance={272} className={s.balanceButton} />
-        <DatePicker
-          selectPeriod={selectPeriod}
-          setPeriodHandler={setSelectPeriod}
-        />
+        <DatePicker />
       </div>
       <div className={s.bottomContent}>
         <div className={s.searchWrapp}>

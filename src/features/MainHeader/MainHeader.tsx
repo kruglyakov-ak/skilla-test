@@ -1,12 +1,11 @@
 import { FC, useState } from 'react'
 import cn from 'classnames'
 import dayjs from 'dayjs'
-import weekday from 'dayjs/plugin/weekday'
 import { Select } from '../../components/Select/Select'
 import s from './mainHeader.module.scss'
 import { UserMenu } from '../../components/UserMenu/UserMenu'
-dayjs.extend(weekday)
 require('dayjs/locale/ru')
+
 export const MainHeader: FC = () => {
   const [organization, setOrganization] = useState(
     'ИП Сидорова Александра Михайловна'
