@@ -2,8 +2,12 @@ import { FC, useEffect, useState, ChangeEvent } from 'react'
 import cn from 'classnames'
 import { BalanceButton, DatePicker, Select } from '../../components'
 import s from './callsSort.module.scss'
+import { useAppDispatch } from '../../hooks/redux'
+import { sortSlice } from '../../store/reducers/SortSlice'
 
 export const CallsSort: FC = () => {
+  const dispatch = useAppDispatch()
+  const { setCallType } = sortSlice.actions
   const [selectPeriod, setSelectPeriod] = useState('3 дня')
 
   const [isFiltersDefault, setIsFiltersDefault] = useState(true)
@@ -56,6 +60,10 @@ export const CallsSort: FC = () => {
   const resetSearch = () => {
     setCallSearch('')
   }
+
+  useEffect(() => {
+    dispatch(setCallType(typeCall))
+  }, [dispatch, setCallType, typeCall])
 
   return (
     <div className={s.wrapper}>

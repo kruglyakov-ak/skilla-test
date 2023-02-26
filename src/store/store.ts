@@ -1,19 +1,20 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import sortReducer from './reducers/SortSlice'
 import { api } from '../services/api'
 
-export const createStore = () =>
-    configureStore({
-      reducer: {
-        [api.reducerPath]: api.reducer,
-      },
-      middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().concat(api.middleware)
-    })
-  
-  export const store = createStore()
-  
-  export type AppDispatch = typeof store.dispatch
-  export const useAppDispatch: () => AppDispatch = useDispatch
-  export type RootState = ReturnType<typeof store.getState>
-  export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector
+const rootReducer = combineReducers({
+  [api.reducerPath]: api.reducer,
+  sort: sortReducer,
+})
+
+export const setupStore = () => {
+  return configureStore({
+    reducer: rootReducer,
+    middleware: getDefaultMiddleware =>
+      getDefaultMiddleware().concat(api.middleware),
+  })
+}
+
+export type RootState = ReturnType<typeof rootReducer>
+export type AppStore = ReturnType<typeof setupStore>
+export type AppDispatch = AppStore['dispatch']
