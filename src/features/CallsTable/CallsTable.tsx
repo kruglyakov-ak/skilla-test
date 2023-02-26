@@ -18,7 +18,6 @@ export const CallsTable: FC<CallsTableProps> = ({
   error,
   isLoading,
 }) => {
-  console.log(calls)
   return (
     <div className={s.wrapper}>
       {isLoading && <h1>Идет загрузка...</h1>}
