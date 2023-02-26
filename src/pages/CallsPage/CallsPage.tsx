@@ -1,16 +1,15 @@
 import { FC } from 'react'
-import { CallsSort, Layout } from '../../features'
+import { CallsSort, CallsTable, Layout } from '../../features'
 import { useAppSelector } from '../../hooks/redux'
 import { useGetCallsQuery } from '../../services/api'
 
 export const CallsPage: FC = () => {
   const { callType } = useAppSelector(state => state.sort)
-  const { data, isLoading, error } = useGetCallsQuery({ in_out: callType })
-  console.log(data?.results)
+  const { data, isLoading } = useGetCallsQuery({ in_out: callType })
   return (
     <Layout>
       <CallsSort />
-      {/* <CallsTable class={data} isLoading={isLoading} error={error}/> */}
+      <CallsTable calls={data?.results} isLoading={isLoading}/>
     </Layout>
   )
 }
