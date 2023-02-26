@@ -1,8 +1,10 @@
 import { SerializedError } from '@reduxjs/toolkit'
 import { FC } from 'react'
-import cn from 'classnames'
+import dayjs from 'dayjs'
+import duration from 'dayjs/plugin/duration'
 import { Call } from '../../types/call'
 import s from './callsTable.module.scss'
+dayjs.extend(duration)
 
 interface CallsTableProps {
   calls: Call[] | undefined
@@ -44,14 +46,18 @@ export const CallsTable: FC<CallsTableProps> = ({
           </thead>
           <tbody>
             {calls?.map(call => (
-              <tr>
+              <tr key={call.id}>
                 <td>{call.in_out}</td>
+                <td>
+                  {dayjs(call.date, 'DD-MM-YYYY HH:mm:ss').format('HH:mm')}
+                </td>
+                <td>
+                    <img src={call.person_avatar} alt="" />
+                </td>
+                <td>{call.from_number} {Boolean(call.from_site) && "С сайта"}</td>
+                <td>{call.source}</td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{dayjs.duration(call.time, 'seconds').format('mm:ss')}</td>
               </tr>
             ))}
           </tbody>

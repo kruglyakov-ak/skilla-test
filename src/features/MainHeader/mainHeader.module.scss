@@ -11,6 +11,10 @@
 
   & .date {
     white-space: nowrap;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
 
   & .analytics {
