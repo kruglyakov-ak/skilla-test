@@ -20,13 +20,18 @@ export const api = createApi({
   endpoints: build => ({
     getCalls: build.query<
       CallsResponse,
-      { date_start: string; date_end: string; in_out?: string }
+      {
+        date_start: string
+        date_end: string
+        in_out: string
+        source?: string
+      }
     >({
-      query({ date_start, date_end, in_out }) {
+      query({ date_start, date_end, in_out, source }) {
         return {
           url: `?date_start=${date_start}&date_end=${date_end}${
             in_out && `&in_out=${in_out}`
-          }`,
+          }${source && `&sources=[${source}]`}`,
           method: 'POST',
           body: {},
         }

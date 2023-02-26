@@ -7,7 +7,7 @@ import { sortSlice } from '../../store/reducers/SortSlice'
 
 export const CallsSort: FC = () => {
   const dispatch = useAppDispatch()
-  const { setCallType } = sortSlice.actions
+  const { setCallType, setCallSource } = sortSlice.actions
 
   const [isFiltersDefault, setIsFiltersDefault] = useState(true)
   const [isCallSearchEmpty, setIsCallSearchEmpty] = useState(true)
@@ -42,6 +42,10 @@ export const CallsSort: FC = () => {
       setIsCallSearchEmpty(false)
     }
   }, [callSearch])
+
+  useEffect(() => {
+    dispatch(setCallSource(source))
+  }, [dispatch, setCallSource, source])
 
   const resetFilters = () => {
     setTypeCall('Все типы')
@@ -158,7 +162,7 @@ export const CallsSort: FC = () => {
           />
           <Select
             title='Все источники'
-            options={[]}
+            options={['С сайта', 'yandex номер', 'google номер']}
             selectOptionHandler={setSource}
             selectedOption={source}
           />
