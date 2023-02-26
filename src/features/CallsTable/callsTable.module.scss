@@ -55,6 +55,10 @@
       & td:last-child {
         text-align: right;
       }
+
+      & .sources {
+        color: $color-text-secondary;
+      }
     }
 
     & thead tr {
